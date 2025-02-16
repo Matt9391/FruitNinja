@@ -1,2 +1,2 @@
 # FruitNinja
- Develp of Fruit Ninja with C++ and SFML
+ Develop of Fruit Ninja with C++ and SFML
