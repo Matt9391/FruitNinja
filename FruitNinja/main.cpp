@@ -7,6 +7,7 @@ Fruit generateNewFruit(sf::RenderWindow& window);
 
 int main()
 {
+    //SOME EDITS PER PROVARE GITHUB
     Random::Init();
     int frameCount = 0;
 
