@@ -1,7 +1,10 @@
 #include <iostream>
+#include <vector>
 #include <SFML/Graphics.hpp>
 #include "Fruit.h"
+#include "Functions.h"
 #include "Random.h"
+#include "Slash.h"
 
 Fruit generateNewFruit(sf::RenderWindow& window);
 
@@ -10,6 +13,7 @@ int main()
     //SOME EDITS PER PROVARE GITHUB
     Random::Init();
     int frameCount = 0;
+
 
     sf::RenderWindow window(sf::VideoMode(800, 600), "Fruit Ninja");
     window.setFramerateLimit(60);
@@ -23,6 +27,12 @@ int main()
 
     std::vector<Fruit> fruits;
     //fruits.push_back(fruit);
+
+    Slash slash;
+
+    float val = 5.7f;
+    float result = constrain(val, 1.0f, 10.0f);
+    std::cout << result;
 
     while (window.isOpen())
     {
@@ -40,14 +50,16 @@ int main()
 
         if (frameCount % 60 == 0) {
             fruits.push_back(generateNewFruit(window));
-            std::cout << "Aggiunto: " << fruits.size() << std::endl;
+            //std::cout << "Aggiunto: " << fruits.size() << std::endl;
         }
+
+        slash.update(window);
 
         for (int i = fruits.size() - 1; i >= 0; --i) {
             Fruit& f = fruits[i];  // Usa un riferimento per evitare la copia
             if (f.toRemove) {
                 fruits.erase(fruits.begin() + i);  // Rimuovi l'elemento
-                std::cout <<"Tolto: "<<fruits.size()<<std::endl;
+                //std::cout <<"Tolto: "<<fruits.size()<<std::endl;
 
             }
         }
@@ -65,6 +77,7 @@ int main()
             fruit.display(window);
         }
 
+        slash.display(window);
         window.display();
 
         

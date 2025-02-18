@@ -1,2 +1,10 @@
-﻿  Fruit.cpp
-  FruitNinja.vcxproj -> E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\x64\Debug\FruitNinja.exe
+﻿  main.cpp
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(58,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(95,42): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(95,42): warning C4244:         with
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(95,42): warning C4244:         [
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(95,42): warning C4244:             T=float
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(95,42): warning C4244:         ]
+  Slash.cpp
+  Generating Code...
+  FruitNinja.vcxproj -> F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\x64\Debug\FruitNinja.exe

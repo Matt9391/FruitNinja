@@ -137,12 +137,14 @@
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Random.cpp" />
+    <ClCompile Include="Slash.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Fruit.h" />
     <ClInclude Include="Functions.h" />
     <ClInclude Include="Random.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Slash.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="FruitNinja.rc" />
