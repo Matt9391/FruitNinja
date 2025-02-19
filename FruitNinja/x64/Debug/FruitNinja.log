@@ -1,12 +1,2 @@
-﻿  Fruit.cpp
-  Functions.cpp
-  main.cpp
-D:\GitHub\FruitNinja\FruitNinja\main.cpp(45,20): warning C4267: 'inizializzazione': conversione da 'size_t' a 'int'. Possibile perdita di dati.
-D:\GitHub\FruitNinja\FruitNinja\main.cpp(81,42): warning C4244: 'argomento': conversione da 'int' a 'T'. Possibile perdita di dati.
-          with
-          [
-              T=float
-          ]
-  Random.cpp
-  Generazione del codice in corso...
+﻿  Slash.cpp
   FruitNinja.vcxproj -> D:\GitHub\FruitNinja\FruitNinja\x64\Debug\FruitNinja.exe
