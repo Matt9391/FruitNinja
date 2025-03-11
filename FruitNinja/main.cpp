@@ -60,14 +60,13 @@ int main()
             if (f.toRemove) {
                 fruits.erase(fruits.begin() + i);  // Rimuovi l'elemento
                 //std::cout <<"Tolto: "<<fruits.size()<<std::endl;
-
             }
         }
 
 
 
         for (Fruit& fruit : fruits) {
-            fruit.update();
+            fruit.update(slash.getCircles());
         }
 
 

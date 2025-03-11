@@ -20,6 +20,15 @@ Fruit::Fruit(sf::Vector2f pos, sf::Vector2f speed, float radius, sf::RenderWindo
 	setVelocity();
 }
 
+void Fruit::checkSlashCollision(const std::vector<sf::CircleShape>& circles) {
+	for (int i = 0; i < circles.size(); i++) {
+		sf::CircleShape c = circles[i];
+		if (checkCircleCollision(this->shape, c)) {
+			this->toRemove = true;
+		}
+	}
+}
+
 void Fruit::setVelocity() {
 	this->velocity = sf::Vector2f(this->speed.x * this->dir.x, this->speed.y * this->dir.y);
 }
@@ -44,9 +53,9 @@ void Fruit::outOfBound() {
 	}
 }
 
-void Fruit::update() {
+void Fruit::update(const std::vector<sf::CircleShape>& circles) {
 	outOfBound();
-	
+	checkSlashCollision(circles);
 	addGravity();
 
 	this->pos += this->velocity;

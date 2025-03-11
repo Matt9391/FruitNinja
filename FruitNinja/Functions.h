@@ -11,3 +11,7 @@ int constrain(int v, int min, int max);
 float constrain(float v, float min, float max);
 
 sf::Vector2f normalize(sf::Vector2f& v);
+
+float distance(const sf::Vector2f& v1,const sf::Vector2f& v2);
+
+bool checkCircleCollision(sf::CircleShape& a, sf::CircleShape& b);

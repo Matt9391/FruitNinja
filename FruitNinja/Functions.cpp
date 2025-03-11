@@ -1,4 +1,5 @@
 #include "Functions.h"
+#include <cmath>
 
 double degreesToRadians(double degrees) {
     return degrees * (M_PI / 180.0); 
@@ -35,4 +36,16 @@ sf::Vector2f normalize(sf::Vector2f& v) {
     else {
         return sf::Vector2f(0.f, 0.f);
     }
+}
+
+float distance(const sf::Vector2f& v1,const sf::Vector2f& v2) {
+    float dx = v1.x - v2.x;
+    float dy = v1.y - v2.y;
+    return std::sqrt(dx * dx + dy * dy);
+}
+
+bool checkCircleCollision(sf::CircleShape& a, sf::CircleShape& b) {
+    float dist = distance(a.getPosition(), b.getPosition());
+    float radii = a.getRadius() + b.getRadius();
+    return dist < radii;
 }
