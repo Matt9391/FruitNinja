@@ -12,6 +12,7 @@ private:
 
 	bool checkSlashing();
 	void moveSlash();
+	void addCircle(sf::Vector2f& mousePos, sf::Vector2f* spawnPos);
 
 	bool slashing;
 	sf::VertexArray slash;

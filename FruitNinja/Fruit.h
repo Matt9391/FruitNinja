@@ -16,6 +16,7 @@ public:
 	
 	sf::Vector2f pos;
 	bool toRemove;
+	bool slashed;
 private:
 	void outOfBound();
 	void checkSlashCollision(const std::vector<sf::CircleShape>& circles);

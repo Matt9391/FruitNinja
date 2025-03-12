@@ -32,17 +32,7 @@ void Slash::update(sf::RenderWindow& window) {
 	sf::Vector2f spawnPos(0, 0);
 
 	if (this->circles.size() > 0) {
-		sf::Vector2f lcPos = this->circles[this->circles.size() - 1].getPosition();
-		float lcRad = this->circles[this->circles.size() - 1].getRadius();
-		float dist = lcRad * 2;
-
-		float distBetween = distance(mousePos, lcPos);
-		if (distBetween < dist) {
-			dist = distBetween;
-		}
-
-		float angle = atan2(mousePos.y - lcPos.y, mousePos.x - lcPos.x);
-		spawnPos = sf::Vector2f(lcPos.x + dist * cos(angle), lcPos.y + dist * sin(angle));
+		addCircle(mousePos, &spawnPos);
 	}
 	else {
 		spawnPos = mousePos;
@@ -57,6 +47,20 @@ void Slash::update(sf::RenderWindow& window) {
 		circles.erase(circles.begin());
 	}
 	moveSlash();
+}
+
+void Slash::addCircle(sf::Vector2f& mousePos, sf::Vector2f* spawnPos) {
+	sf::Vector2f lcPos = this->circles[this->circles.size() - 1].getPosition();
+	float lcRad = this->circles[this->circles.size() - 1].getRadius();
+	float dist = lcRad * 2;
+
+	float distBetween = distance(mousePos, lcPos);
+	if (distBetween < dist) {
+		dist = distBetween;
+	}
+
+	float angle = atan2(mousePos.y - lcPos.y, mousePos.x - lcPos.x);
+	*spawnPos = sf::Vector2f(lcPos.x + dist * cos(angle), lcPos.y + dist * sin(angle));
 }
 
 void Slash::moveSlash() {

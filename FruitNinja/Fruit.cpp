@@ -7,7 +7,8 @@ Fruit::Fruit(sf::Vector2f pos, sf::Vector2f speed, float radius, sf::RenderWindo
 	speed(speed), 
 	radius(radius), 
 	gravity(0.5), 
-	toRemove(false)
+	toRemove(false),
+	slashed(false)
 {
 	velocity = sf::Vector2f(0, 0);
 	dir = sf::Vector2f(0, 0);
@@ -25,6 +26,7 @@ void Fruit::checkSlashCollision(const std::vector<sf::CircleShape>& circles) {
 		sf::CircleShape c = circles[i];
 		if (checkCircleCollision(this->shape, c)) {
 			this->toRemove = true;
+			this->slashed = true;
 		}
 	}
 }

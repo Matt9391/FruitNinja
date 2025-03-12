@@ -9,10 +9,22 @@
 Fruit generateNewFruit(sf::RenderWindow& window);
 
 int main()
-{
-    //SOME EDITS PER PROVARE GITHUB
+{    
     Random::Init();
     int frameCount = 0;
+    int score = 0;
+
+    sf::Font font;
+    if (!font.loadFromFile("C:/Windows/Fonts/arial.ttf")) {
+        std::cerr << "Errore nel caricamento del font!" << std::endl;
+        return -1;
+    }
+
+    sf::Text text;
+    text.setFont(font); // Imposta il font
+    text.setCharacterSize(45); // Dimensione del testo
+    text.setFillColor(sf::Color::White); // Colore del testo
+    text.setPosition(400, 50); // Posizione del testo
 
 
     sf::RenderWindow window(sf::VideoMode(800, 600), "Fruit Ninja");
@@ -58,6 +70,13 @@ int main()
         for (int i = fruits.size() - 1; i >= 0; --i) {
             Fruit& f = fruits[i];  // Usa un riferimento per evitare la copia
             if (f.toRemove) {
+                if (f.slashed) {
+                    score++;
+                }
+                else {
+                    score = 0;
+                }
+                text.setString(std::to_string(score));
                 fruits.erase(fruits.begin() + i);  // Rimuovi l'elemento
                 //std::cout <<"Tolto: "<<fruits.size()<<std::endl;
             }
@@ -77,6 +96,7 @@ int main()
         }
 
         slash.display(window);
+        window.draw(text);
         window.display();
 
         
