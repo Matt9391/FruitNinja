@@ -4,10 +4,10 @@
 class Slash
 {
 public:
-	Slash();
+	Slash(sf::RenderWindow& window);
 	void display(sf::RenderWindow& window);
 	void update(sf::RenderWindow& window);
-	std::vector<sf::CircleShape> getCircles();
+	sf::CircleShape getHead();
 private:
 
 	bool checkSlashing();
@@ -15,6 +15,8 @@ private:
 	void addCircle(sf::Vector2f& mousePos, sf::Vector2f* spawnPos);
 
 	bool slashing;
+	int maxTails;
+	float radius;
 	sf::VertexArray slash;
 	std::vector<sf::CircleShape> circles;
 };

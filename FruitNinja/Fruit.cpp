@@ -2,7 +2,7 @@
 #include "Fruit.h"
 #include "Functions.h"
 
-Fruit::Fruit(sf::Vector2f pos, sf::Vector2f speed, float radius, sf::RenderWindow &window) : 
+Fruit::Fruit(sf::Vector2f pos, sf::Vector2f speed, float radius, sf::Vector2f targetPos) : 
 	pos(pos), 
 	speed(speed), 
 	radius(radius), 
@@ -16,18 +16,25 @@ Fruit::Fruit(sf::Vector2f pos, sf::Vector2f speed, float radius, sf::RenderWindo
 	shape.setRadius(radius);
 	shape.setOrigin(radius, radius);
 	shape.setPosition(pos);
+	shape.setFillColor(sf::Color(100, 0, 100));
 
-	setDir(sf::Vector2f((float)window.getSize().x/2, (float)window.getSize().y/2));
+	setDir(targetPos);
 	setVelocity();
 }
 
-void Fruit::checkSlashCollision(const std::vector<sf::CircleShape>& circles) {
-	for (int i = 0; i < circles.size(); i++) {
-		sf::CircleShape c = circles[i];
-		if (checkCircleCollision(this->shape, c)) {
-			this->toRemove = true;
-			this->slashed = true;
-		}
+void Fruit::checkSlashCollision(sf::RenderWindow& w, sf::CircleShape& circle) {
+	if (circle.getRadius() <= 2) {
+		return;
+	}
+
+	if (checkCircleCollision(this->shape, circle)) {
+		this->toRemove = true;
+		this->slashed = true;
+		std::cout << "COLLIDO" << std::endl;
+		sf::Vector2f mousePos = w.mapPixelToCoords(sf::Mouse::getPosition(w));
+		//float angle = atan2(this->pos.y - mousePos.y, this->pos.x - mousePos.x);
+		float angle = atan2(mousePos.y - this->pos.y, mousePos.x - this->pos.x);
+		spawnHalf(this->pos,this->radius,angle);
 	}
 }
 
@@ -49,15 +56,16 @@ void Fruit::setDir(sf::Vector2f targetPos) {
 	this->dir.y = -1;
 }
 
-void Fruit::outOfBound() {
-	if (this->pos.y > 800) {
+void Fruit::outOfBound(sf::RenderWindow& w) {
+	if (this->pos.y > w.getSize().y * 1.5) {
+		std::cout << "ESPLODO" << std::endl;
 		this->toRemove = true;
 	}
 }
 
-void Fruit::update(const std::vector<sf::CircleShape>& circles) {
-	outOfBound();
-	checkSlashCollision(circles);
+void Fruit::update(sf::RenderWindow& w,sf::CircleShape circle) {
+	outOfBound(w);
+	checkSlashCollision(w,circle);
 	addGravity();
 
 	this->pos += this->velocity;
@@ -66,6 +74,5 @@ void Fruit::update(const std::vector<sf::CircleShape>& circles) {
 void Fruit::display(sf::RenderWindow& window) {
 	this->shape.setPosition(this->pos);
 
-	this->shape.setFillColor(sf::Color(100, 0, 100));
 	window.draw(this->shape);
 }

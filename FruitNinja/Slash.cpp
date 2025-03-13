@@ -2,8 +2,8 @@
 #include "Functions.h"
 #include <iostream>
 
-Slash::Slash() : slashing(false), slash(sf::TriangleStrip){
-	
+Slash::Slash(sf::RenderWindow& window) : slashing(false), slash(sf::TriangleStrip), maxTails(9){
+	this->radius = window.getSize().y / 27;
 }
 
 void Slash::update(sf::RenderWindow& window) {
@@ -26,7 +26,7 @@ void Slash::update(sf::RenderWindow& window) {
 
 	
 
-	sf::CircleShape c(15);
+	sf::CircleShape c(this->radius);
 
 	sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
 	sf::Vector2f spawnPos(0, 0);
@@ -40,10 +40,10 @@ void Slash::update(sf::RenderWindow& window) {
 
 	c.setPosition(spawnPos);
 	c.setFillColor(sf::Color::Red);
-	c.setOrigin(15, 15);
+	c.setOrigin(this->radius, this->radius);
 	circles.push_back(c);
 
-	if (circles.size() > 7) {
+	if (circles.size() > this->maxTails) {
 		circles.erase(circles.begin());
 	}
 	moveSlash();
@@ -52,11 +52,14 @@ void Slash::update(sf::RenderWindow& window) {
 void Slash::addCircle(sf::Vector2f& mousePos, sf::Vector2f* spawnPos) {
 	sf::Vector2f lcPos = this->circles[this->circles.size() - 1].getPosition();
 	float lcRad = this->circles[this->circles.size() - 1].getRadius();
-	float dist = lcRad * 2;
+	float minDist = lcRad * 2;
 
-	float distBetween = distance(mousePos, lcPos);
-	if (distBetween < dist) {
-		dist = distBetween;
+	float dist = distance(mousePos, lcPos);
+	if (dist < minDist) {
+		minDist = dist;
+	}
+	else {
+		dist = minDist;
 	}
 
 	float angle = atan2(mousePos.y - lcPos.y, mousePos.x - lcPos.x);
@@ -82,7 +85,7 @@ void Slash::moveSlash() {
 		//normalizzazione vettore
 		normal = normalize(normal);
 
-		float r = 15;
+		float r = this->radius;
 		sf::Vector2f extLeft = c1 + normal * r;
 		sf::Vector2f extRight = c1 - normal * r;
 		sf::Vector2f extBottom = c1 + normalize(dir) * r;
@@ -103,8 +106,14 @@ void Slash::moveSlash() {
 	}
 }
 
-std::vector<sf::CircleShape> Slash::getCircles() {
-	return this->circles;
+sf::CircleShape Slash::getHead() {
+	if (this->circles.size() > 0) {
+		return this->circles[this->circles.size() - 1];
+	}
+	else {
+		sf::CircleShape c(2);
+		return c;
+	}
 }
 
 bool Slash::checkSlashing() {
@@ -116,6 +125,9 @@ void Slash::display(sf::RenderWindow& window) {
 	//for (sf::CircleShape c : this->circles) {
 	//		window.draw(c);
 	//}
-
+	//if (this->circles.size() > 0) {
+	//	window.draw(this->circles[this->circles.size()-1]);
+	//}
 	window.draw(this->slash);
+
 }

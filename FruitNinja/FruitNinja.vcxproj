@@ -135,6 +135,7 @@
   <ItemGroup>
     <ClCompile Include="Fruit.cpp" />
     <ClCompile Include="Functions.cpp" />
+    <ClCompile Include="HalfFruit.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="Slash.cpp" />
@@ -142,6 +143,7 @@
   <ItemGroup>
     <ClInclude Include="Fruit.h" />
     <ClInclude Include="Functions.h" />
+    <ClInclude Include="HalfFruit.h" />
     <ClInclude Include="Random.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Slash.h" />

@@ -1,4 +1,5 @@
 #include "Functions.h"
+#include <iostream>
 #include <cmath>
 
 double degreesToRadians(double degrees) {
@@ -48,4 +49,10 @@ bool checkCircleCollision(sf::CircleShape& a, sf::CircleShape& b) {
     float dist = distance(a.getPosition(), b.getPosition());
     float radii = a.getRadius() + b.getRadius();
     return dist < radii;
+}
+
+
+void spawnHalf(sf::Vector2f pos, float rad, float angle) {
+    halfFruits.push_back(HalfFruit(pos, 5, rad*0.8, angle + 0.15f, 20));
+    halfFruits.push_back(HalfFruit(pos, 5, rad*0.8, angle + 0.15f + M_PI, 20));
 }

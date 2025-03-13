@@ -5,8 +5,11 @@
 #include "Functions.h"
 #include "Random.h"
 #include "Slash.h"
+#include "HalfFruit.h"
 
 Fruit generateNewFruit(sf::RenderWindow& window);
+
+std::vector<HalfFruit> halfFruits;
 
 int main()
 {    
@@ -24,10 +27,10 @@ int main()
     text.setFont(font); // Imposta il font
     text.setCharacterSize(45); // Dimensione del testo
     text.setFillColor(sf::Color::White); // Colore del testo
-    text.setPosition(400, 50); // Posizione del testo
+    text.setPosition(600, 50); // Posizione del testo
 
 
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Fruit Ninja");
+    sf::RenderWindow window(sf::VideoMode(1200, 800), "Fruit Ninja");
     window.setFramerateLimit(60);
     //float radius = 25.f;  // Raggio del frutto
     
@@ -40,11 +43,7 @@ int main()
     std::vector<Fruit> fruits;
     //fruits.push_back(fruit);
 
-    Slash slash;
-
-    float val = 5.7f;
-    float result = constrain(val, 1.0f, 10.0f);
-    std::cout << result;
+    Slash slash(window);
 
     while (window.isOpen())
     {
@@ -85,15 +84,27 @@ int main()
 
 
         for (Fruit& fruit : fruits) {
-            fruit.update(slash.getCircles());
+            fruit.update(window,slash.getHead());
         }
 
+        for (int i = halfFruits.size() - 1; i >= 0; --i) {
+            HalfFruit& hfruit = halfFruits[i];
+            hfruit.update();
+            if (hfruit.toRemove) {
+                halfFruits.erase(halfFruits.begin() + i);
+            }
+        }
 
         window.clear();
 
         for (Fruit& fruit : fruits) {
             fruit.display(window);
         }
+
+        for (HalfFruit& hfruit : halfFruits) {
+            hfruit.display(window);
+        }
+
 
         slash.display(window);
         window.draw(text);
@@ -106,12 +117,16 @@ int main()
 }
 
 Fruit generateNewFruit(sf::RenderWindow &window) {
-    float radius = 35.f;  // Raggio del frutto
+    float radius = window.getSize().y / 13;  // Raggio del frutto
 
-    sf::Vector2f spawnPos(Random::randomFloat(radius, window.getSize().x - radius), 650);
+    sf::Vector2f spawnPos(Random::randomFloat(radius, window.getSize().x - radius), window.getSize().y + radius);
     //std::cout << spawnPos.x;
     //spawnPos = sf::Vector2f(window.getSize().x / 2 - 10, window.getSize().y / 2 + 1);
-    sf::Vector2f sp(10, Random::randomInt(18,23));
+    int minSpeed = window.getSize().y / 32;
+    int maxSpeed = window.getSize().y / 28;
 
-    return Fruit(spawnPos, sp, radius, window);
+    sf::Vector2f sp(10, Random::randomInt(minSpeed, maxSpeed));
+
+    sf::Vector2f targetPos((float)window.getSize().x / 2, (float)window.getSize().y / 2);
+    return Fruit(spawnPos, sp, radius, targetPos);
 }

@@ -1,8 +1,6 @@
-﻿  main.cpp
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(70,20): warning C4267: 'inizializzazione': conversione da 'size_t' a 'int'. Possibile perdita di dati.
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(114,42): warning C4244: 'argomento': conversione da 'int' a 'T'. Possibile perdita di dati.
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(114,42): warning C4244:         with
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(114,42): warning C4244:         [
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(114,42): warning C4244:             T=float
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(114,42): warning C4244:         ]
+﻿  Functions.cpp
+E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(56,19): warning C4305: '+=': troncamento da 'double' a 'float'
+E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(57,47): warning C4244: 'argomento': conversione da 'double' a 'float'. Possibile perdita di dati.
+E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(58,67): warning C4244: 'argomento': conversione da 'double' a 'float'. Possibile perdita di dati.
+E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(58,47): warning C4244: 'argomento': conversione da 'double' a 'float'. Possibile perdita di dati.
   FruitNinja.vcxproj -> E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\x64\Debug\FruitNinja.exe

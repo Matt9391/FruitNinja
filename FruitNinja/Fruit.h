@@ -6,9 +6,9 @@ class Fruit
 
 public:
 
-	Fruit(sf::Vector2f pos, sf::Vector2f speed, float radius, sf::RenderWindow& window);
+	Fruit(sf::Vector2f pos, sf::Vector2f speed, float radius, sf::Vector2f targetPos);
 
-	void update(const std::vector<sf::CircleShape>& circles);
+	void update(sf::RenderWindow& w, sf::CircleShape circle);
 	void display(sf::RenderWindow& window);
 	void setDir(sf::Vector2f targetPos);
 	void addGravity();
@@ -18,8 +18,8 @@ public:
 	bool toRemove;
 	bool slashed;
 private:
-	void outOfBound();
-	void checkSlashCollision(const std::vector<sf::CircleShape>& circles);
+	void outOfBound(sf::RenderWindow& window);
+	void checkSlashCollision(sf::RenderWindow& w,sf::CircleShape& circle);
 	sf::CircleShape shape;
 	sf::Vector2f velocity;
 	sf::Vector2f speed;
