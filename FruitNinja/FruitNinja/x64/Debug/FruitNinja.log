@@ -1,6 +1,16 @@
-﻿  Functions.cpp
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(56,19): warning C4305: '+=': troncamento da 'double' a 'float'
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(57,47): warning C4244: 'argomento': conversione da 'double' a 'float'. Possibile perdita di dati.
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(58,67): warning C4244: 'argomento': conversione da 'double' a 'float'. Possibile perdita di dati.
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(58,47): warning C4244: 'argomento': conversione da 'double' a 'float'. Possibile perdita di dati.
-  FruitNinja.vcxproj -> E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\x64\Debug\FruitNinja.exe
+﻿  Entity.cpp
+  main.cpp
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(69,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(90,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(120,18): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(120,18): warning C4244:         with
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(120,18): warning C4244:         [
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(120,18): warning C4244:             T=unsigned int
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(120,18): warning C4244:         ]
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(128,42): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(128,42): warning C4244:         with
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(128,42): warning C4244:         [
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(128,42): warning C4244:             T=float
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(128,42): warning C4244:         ]
+  Generating Code...
+  FruitNinja.vcxproj -> F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\x64\Debug\FruitNinja.exe

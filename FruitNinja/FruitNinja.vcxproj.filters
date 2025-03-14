@@ -33,6 +33,9 @@
     <ClCompile Include="HalfFruit.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Fruit.h">
@@ -51,6 +54,9 @@
       <Filter>File di intestazione</Filter>
     </ClInclude>
     <ClInclude Include="HalfFruit.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
   </ItemGroup>
