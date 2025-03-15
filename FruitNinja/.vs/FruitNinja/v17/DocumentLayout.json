@@ -3,28 +3,36 @@
   "WorkspaceRootPath": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|solutionrelative:Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Slash.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|solutionrelative:Slash.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Bomb.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|solutionrelative:Bomb.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Bomb.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|solutionrelative:Bomb.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|solutionrelative:Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Fruit.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|solutionrelative:Fruit.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|solutionrelative:Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Fruit.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|solutionrelative:Fruit.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|solutionrelative:Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Slash.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|solutionrelative:Slash.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{90795D7A-F62A-48A5-9745-596F62F6E41D}|FruitNinja.vcxproj|F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -54,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,33 +82,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "Bomb.cpp",
+              "DocumentMoniker": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Bomb.cpp",
+              "RelativeDocumentMoniker": "Bomb.cpp",
+              "ToolTip": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Bomb.cpp",
+              "RelativeToolTip": "Bomb.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-15T18:04:11.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Bomb.h",
+              "DocumentMoniker": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Bomb.h",
+              "RelativeDocumentMoniker": "Bomb.h",
+              "ToolTip": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Bomb.h",
+              "RelativeToolTip": "Bomb.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-15T18:00:06.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Entity.cpp",
               "DocumentMoniker": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Entity.cpp",
               "RelativeDocumentMoniker": "Entity.cpp",
               "ToolTip": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Entity.cpp",
               "RelativeToolTip": "Entity.cpp",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAEEAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-14T22:58:19.231Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Entity.h",
               "DocumentMoniker": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Entity.h",
               "RelativeDocumentMoniker": "Entity.h",
               "ToolTip": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Entity.h",
               "RelativeToolTip": "Entity.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-03-14T22:49:37.416Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "HalfFruit.cpp",
               "DocumentMoniker": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\HalfFruit.cpp",
               "RelativeDocumentMoniker": "HalfFruit.cpp",
@@ -108,12 +142,11 @@
               "RelativeToolTip": "HalfFruit.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-13T15:12:05.492Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T15:12:05.492Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "HalfFruit.h",
               "DocumentMoniker": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\HalfFruit.h",
               "RelativeDocumentMoniker": "HalfFruit.h",
@@ -121,12 +154,11 @@
               "RelativeToolTip": "HalfFruit.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-13T15:09:02.501Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T15:09:02.501Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Functions.cpp",
               "DocumentMoniker": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Functions.cpp",
               "RelativeDocumentMoniker": "Functions.cpp",
@@ -134,12 +166,11 @@
               "RelativeToolTip": "Functions.cpp",
               "ViewState": "AgIAACUAAAAAAAAAAADgvzIAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-18T20:11:06.527Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:11:06.527Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Functions.h",
               "DocumentMoniker": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Functions.h",
               "RelativeDocumentMoniker": "Functions.h",
@@ -147,12 +178,11 @@
               "RelativeToolTip": "Functions.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-18T20:10:31.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:10:31.659Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Slash.cpp",
               "DocumentMoniker": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Slash.cpp",
               "RelativeDocumentMoniker": "Slash.cpp",
@@ -164,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Slash.h",
               "DocumentMoniker": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Slash.h",
               "RelativeDocumentMoniker": "Slash.h",
@@ -172,44 +202,43 @@
               "RelativeToolTip": "Slash.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-18T18:37:09.278Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T18:37:09.278Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Fruit.cpp",
               "DocumentMoniker": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Fruit.cpp",
               "RelativeDocumentMoniker": "Fruit.cpp",
               "ToolTip": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Fruit.cpp",
               "RelativeToolTip": "Fruit.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-16T18:59:34.551Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Fruit.h",
               "DocumentMoniker": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Fruit.h",
               "RelativeDocumentMoniker": "Fruit.h",
               "ToolTip": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\Fruit.h",
               "RelativeToolTip": "Fruit.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-02-16T18:59:27.298Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "main.cpp",
               "DocumentMoniker": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "F:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFYAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAwwEEAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-16T17:49:36.786Z",
               "EditorCaption": ""

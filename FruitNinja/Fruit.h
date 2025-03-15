@@ -1,4 +1,3 @@
-#include <SFML/Graphics.hpp>
 #include "Entity.h"
 
 #pragma once

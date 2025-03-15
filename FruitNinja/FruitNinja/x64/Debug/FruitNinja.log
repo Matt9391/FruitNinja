@@ -1,16 +1,25 @@
-﻿  Entity.cpp
-  main.cpp
-F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(69,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(90,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(120,18): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
-F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(120,18): warning C4244:         with
-F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(120,18): warning C4244:         [
-F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(120,18): warning C4244:             T=unsigned int
-F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(120,18): warning C4244:         ]
-F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(128,42): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(128,42): warning C4244:         with
-F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(128,42): warning C4244:         [
-F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(128,42): warning C4244:             T=float
-F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(128,42): warning C4244:         ]
-  Generating Code...
+﻿  main.cpp
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(77,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(98,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(106,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(148,18): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(148,18): warning C4244:         with
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(148,18): warning C4244:         [
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(148,18): warning C4244:             T=unsigned int
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(148,18): warning C4244:         ]
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(156,42): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(156,42): warning C4244:         with
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(156,42): warning C4244:         [
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(156,42): warning C4244:             T=float
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(156,42): warning C4244:         ]
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(163,18): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(163,18): warning C4244:         with
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(163,18): warning C4244:         [
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(163,18): warning C4244:             T=unsigned int
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(163,18): warning C4244:         ]
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(171,42): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(171,42): warning C4244:         with
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(171,42): warning C4244:         [
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(171,42): warning C4244:             T=float
+F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\main.cpp(171,42): warning C4244:         ]
   FruitNinja.vcxproj -> F:\Informatica\GitHubRepos\FruitNinja\FruitNinja\x64\Debug\FruitNinja.exe
