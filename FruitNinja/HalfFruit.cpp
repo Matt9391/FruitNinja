@@ -5,7 +5,8 @@ HalfFruit::HalfFruit(sf::Vector2f pos, float speed, float radius, float angle, i
 	speed(speed),
 	radius(radius),
 	lifespan(lifespan),
-	toRemove(false)
+	toRemove(false),
+	gravity(0.5)
 {
 	velocity = sf::Vector2f(0, 0);
 	dir = sf::Vector2f(0, 0);
@@ -19,12 +20,17 @@ HalfFruit::HalfFruit(sf::Vector2f pos, float speed, float radius, float angle, i
 	setVelocity();
 }
 
+void HalfFruit::addGravity() {
+	this->velocity.y += this->gravity;
+}
+
 void HalfFruit::update() {
 	lifespan--;
 	if (lifespan < 0) {
 		this->toRemove = true;
 	}
 
+	addGravity();
 	this->pos += this->velocity;
 }
 

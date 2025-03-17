@@ -1,22 +1,4 @@
-﻿  Fruit.cpp
-  Functions.cpp
-D:\GitHub\FruitNinja\FruitNinja\Functions.cpp(56,47): warning C4244: 'argomento': conversione da 'double' a 'float'. Possibile perdita di dati.
-D:\GitHub\FruitNinja\FruitNinja\Functions.cpp(57,67): warning C4244: 'argomento': conversione da 'double' a 'float'. Possibile perdita di dati.
-D:\GitHub\FruitNinja\FruitNinja\Functions.cpp(57,47): warning C4244: 'argomento': conversione da 'double' a 'float'. Possibile perdita di dati.
-  HalfFruit.cpp
-  main.cpp
-D:\GitHub\FruitNinja\FruitNinja\main.cpp(69,20): warning C4267: 'inizializzazione': conversione da 'size_t' a 'int'. Possibile perdita di dati.
-D:\GitHub\FruitNinja\FruitNinja\main.cpp(90,20): warning C4267: 'inizializzazione': conversione da 'size_t' a 'int'. Possibile perdita di dati.
-D:\GitHub\FruitNinja\FruitNinja\main.cpp(120,18): warning C4244: 'inizializzazione': conversione da 'T' a 'float'. Possibile perdita di dati.
-          with
-          [
-              T=unsigned int
-          ]
-D:\GitHub\FruitNinja\FruitNinja\main.cpp(128,42): warning C4244: 'argomento': conversione da 'int' a 'T'. Possibile perdita di dati.
-          with
-          [
-              T=float
-          ]
+﻿  HalfFruit.cpp
   Slash.cpp
 D:\GitHub\FruitNinja\FruitNinja\Slash.cpp(6,36): warning C4244: '=': conversione da 'T' a 'float'. Possibile perdita di dati.
           with
@@ -24,5 +6,4 @@ D:\GitHub\FruitNinja\FruitNinja\Slash.cpp(6,36): warning C4244: '=': conversione
               T=unsigned int
           ]
   Generazione del codice in corso...
-  LINK : D:\GitHub\FruitNinja\FruitNinja\x64\Debug\FruitNinja.exe non trovato o non compilato dall'ultimo collegamento incrementale; verrà eseguito il collegamento completo
   FruitNinja.vcxproj -> D:\GitHub\FruitNinja\FruitNinja\x64\Debug\FruitNinja.exe

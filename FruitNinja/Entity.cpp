@@ -56,6 +56,8 @@ bool Entity::checkSlashCollision(sf::CircleShape& circle) {
 	if (checkCircleCollision(this->shape, circle)) {
 		return true;
 	}
+
+	return false;
 	
 }
 

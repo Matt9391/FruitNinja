@@ -9,9 +9,9 @@ void Random::Init() {
 
 float Random::randomFloat(float min, float max) {
 	std::uniform_real_distribution<float> dist(min, max);
-	return dist(gen);
+	return (float)dist(gen);
 }
 int Random::randomInt(int min, int max) {
 	std::uniform_int_distribution<int> dist(min, max);
-	return dist(gen);
+	return (int)dist(gen);
 }

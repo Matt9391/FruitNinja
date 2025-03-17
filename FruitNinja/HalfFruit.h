@@ -11,6 +11,7 @@ public:
 	void display(sf::RenderWindow& window);
 	void setDir(float angle);
 	void setVelocity();
+	void addGravity();
 
 	bool toRemove;
 private:
@@ -19,6 +20,7 @@ private:
 	sf::CircleShape shape;
 	float speed;
 	float radius;
+	float gravity;
 
 	sf::Vector2f velocity;
 	sf::Vector2f dir;

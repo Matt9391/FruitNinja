@@ -143,13 +143,13 @@ int main()
 }
 
 Fruit generateNewFruit(sf::RenderWindow &window) {
-    float radius = window.getSize().y / 13;  // Raggio del frutto
+    float radius = window.getSize().y / 13.f;  // Raggio del frutto
 
     sf::Vector2f spawnPos(Random::randomFloat(radius, window.getSize().x - radius), window.getSize().y + radius);
     //std::cout << spawnPos.x;
     //spawnPos = sf::Vector2f(window.getSize().x / 2 - 10, window.getSize().y / 2 + 1);
-    int minSpeed = window.getSize().y / 32;
-    int maxSpeed = window.getSize().y / 28;
+    int minSpeed = (int)window.getSize().y / 32;
+    int maxSpeed = (int)window.getSize().y / 28;
 
     sf::Vector2f sp(10, Random::randomInt(minSpeed, maxSpeed));
 
@@ -158,13 +158,13 @@ Fruit generateNewFruit(sf::RenderWindow &window) {
 }
 
 Bomb generateNewBomb(sf::RenderWindow &window) {
-    float radius = window.getSize().y / 13;  // Raggio del frutto
+    float radius = window.getSize().y / 13.f;  // Raggio del frutto
 
     sf::Vector2f spawnPos(Random::randomFloat(radius, window.getSize().x - radius), window.getSize().y + radius);
     //std::cout << spawnPos.x;
     //spawnPos = sf::Vector2f(window.getSize().x / 2 - 10, window.getSize().y / 2 + 1);
-    int minSpeed = window.getSize().y / 32;
-    int maxSpeed = window.getSize().y / 28;
+    int minSpeed = (int)window.getSize().y / 32;
+    int maxSpeed = (int)window.getSize().y / 28;
 
     sf::Vector2f sp(10, Random::randomInt(minSpeed, maxSpeed));
 
