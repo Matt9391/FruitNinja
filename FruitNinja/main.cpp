@@ -7,6 +7,7 @@
 #include "Slash.h"
 #include "Bomb.h"
 #include "HalfFruit.h"
+#include "UI.h"
 
 Fruit generateNewFruit(sf::RenderWindow& window);
 Bomb generateNewBomb(sf::RenderWindow& window);
@@ -17,25 +18,14 @@ int main()
 {    
     Random::Init();
     int frameCount = 0;
-    int score = 0;
 
-    sf::Font font;
-    if (!font.loadFromFile("C:/Windows/Fonts/arial.ttf")) {
-        std::cerr << "Errore nel caricamento del font!" << std::endl;
-        return -1;
-    }
-
-    sf::Text text;
-    text.setFont(font); // Imposta il font
-    text.setCharacterSize(45); // Dimensione del testo
-    text.setFillColor(sf::Color::White); // Colore del testo
-    text.setPosition(600, 50); // Posizione del testo
 
 
     sf::RenderWindow window(sf::VideoMode(1200, 800), "Fruit Ninja");
     window.setFramerateLimit(60);
     //float radius = 25.f;  // Raggio del frutto
     
+    UI::init(window);
     //sf::Vector2f spawnPos(Random::randomFloat(radius, window.getSize().x - radius), 500);
     //std::cout << spawnPos.x;
     //spawnPos = sf::Vector2f(window.getSize().x / 2 - 10, window.getSize().y / 2 + 1);
@@ -62,7 +52,7 @@ int main()
                 window.close();
         }
 
-        if (frameCount % 60 == 0) {
+        if (frameCount % 20 == 0) {
             fruits.push_back(generateNewFruit(window));
             //std::cout << "Aggiunto: " << fruits.size() << std::endl;
         }
@@ -76,12 +66,11 @@ int main()
             Fruit& f = fruits[i];  // Usa un riferimento per evitare la copia
             if (f.toRemove) {
                 if (f.slashed) {
-                    score++;
+                    UI::incrementScore();
                 }
                 else {
-                    score = 0;
+                    UI::decrementLives();
                 }
-                text.setString(std::to_string(score));
                 fruits.erase(fruits.begin() + i);  // Rimuovi l'elemento
                 //std::cout <<"Tolto: "<<fruits.size()<<std::endl;
             }
@@ -105,9 +94,8 @@ int main()
             Bomb& b = bombs[i];  // Usa un riferimento per evitare la copia
             if (b.toRemove) {
                 if (b.slashed) {
-                    score = 0;
+                    
                 }
-                text.setString(std::to_string(score));
                 bombs.erase(bombs.begin() + i);  // Rimuovi l'elemento
                 //std::cout <<"Tolto: "<<fruits.size()<<std::endl;
             }
@@ -133,7 +121,8 @@ int main()
 
 
         slash.display(window);
-        window.draw(text);
+
+        UI::display(window);
         window.display();
 
         
