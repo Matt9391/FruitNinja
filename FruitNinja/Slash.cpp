@@ -69,9 +69,10 @@ void Slash::addCircle(sf::Vector2f& mousePos, sf::Vector2f* spawnPos) {
 void Slash::moveSlash() {
 	this->slash.clear();
 
-	int alpha = 180;
+	int alpha = 255;
 	int b = 255;
-	int red = 0;
+	int red = 255;
+	int green = 255;
 
 	for (int i = 0; i < this->circles.size() - 1; i++) {
 		sf::Vector2f c1 = this->circles[i].getPosition();
@@ -93,24 +94,21 @@ void Slash::moveSlash() {
 		sf::Vector2f extBottom = c1 + normalize(dir) * r;
 		sf::Vector2f extTop = c2 - normalize(dir) * (r / 2);
 
+		red -= 15;
+		green -= 35;
+		red = constrain((int)red, 0, 255);
+		green = constrain((int)green, 0, 255);
+
 
 		if (i == 0) {
-			this->slash.append(sf::Vertex(extBottom, sf::Color(red, 0, b, alpha)));
+			this->slash.append(sf::Vertex(extBottom, sf::Color(red, green, b, alpha)));
 		}
 		else if (i == this->circles.size() - 2) {
-			this->slash.append(sf::Vertex(extTop, sf::Color(red, 0, b, alpha)));
+			this->slash.append(sf::Vertex(extTop, sf::Color(red, green, b, alpha)));
 		}
 
-		this->slash.append(sf::Vertex(extLeft, sf::Color(red, 0, b, alpha)));
-		this->slash.append(sf::Vertex(extRight, sf::Color(red, 0, b, alpha)));
-
-		alpha += 25;
-		//b += 25;
-		red += 35;
-		b -= 15;
-		alpha = constrain(alpha, 0, 255);
-		b = constrain(b, 0, 255);
-		red = constrain((int)red, 0, 255);
+		this->slash.append(sf::Vertex(extLeft, sf::Color(red, green, b, alpha)));
+		this->slash.append(sf::Vertex(extRight, sf::Color(red, green, b, alpha)));
 	}
 }
 
@@ -122,6 +120,10 @@ sf::CircleShape Slash::getHead() {
 		sf::CircleShape c(2);
 		return c;
 	}
+}
+
+bool Slash::getSlashing() {
+	return this->slashing;
 }
 
 bool Slash::checkSlashing() {

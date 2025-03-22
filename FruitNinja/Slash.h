@@ -8,6 +8,8 @@ public:
 	void display(sf::RenderWindow& window);
 	void update(sf::RenderWindow& window);
 	sf::CircleShape getHead();
+
+	bool getSlashing();
 private:
 
 	bool checkSlashing();

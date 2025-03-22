@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "UI.h"
+#include "Functions.h"
 
 int UI::score = 0;
 int UI::maxScore = 0;
@@ -10,13 +11,18 @@ sf::Font UI::font;
 sf::Text UI::scoreTxt;
 sf::Text UI::maxScoreTxt;
 sf::Text UI::livesTxt;
+sf::Sprite UI::lifeGfx;
 
-void UI::init(sf::RenderWindow& window) {
+void UI::init(sf::RenderWindow& window, sf::Texture& lifeTxt) {
 	if (!font.loadFromFile("C:/Windows/Fonts/arial.ttf")) {
 		std::cerr << "Errore nel caricamento del font!" << std::endl;
 		return;
 	}
-	
+
+	lifeGfx.setTexture(lifeTxt);
+	lifeGfx.setOrigin(lifeTxt.getSize().x / 2.f, lifeTxt.getSize().y / 2.f);
+	lifeGfx.setScale(5, 5);
+
 	scoreTxt.setFont(font); 
 	maxScoreTxt.setFont(font);
 	livesTxt.setFont(font); 
@@ -63,21 +69,34 @@ void UI::resetScore() {
 	score = 0;
 }
 
-void UI::decrementLives() {
+void UI::resetAll() {
 	if (!initalized) {
 		std::cout << "non hai inizializzato la ui" << std::endl;
 		throw std::exception("non hai inizializzato la ui");
 		return;
+	}
+
+	score = 0;
+	maxScore = 0;
+	lives = 3;
+}
+
+bool UI::decrementLives() {
+	if (!initalized) {
+		std::cout << "non hai inizializzato la ui" << std::endl;
+		throw std::exception("non hai inizializzato la ui");
+		return false;
 	}
 	
 	resetScore();
 
 	if (lives > 1) {
 		lives--;
-		return;
+		return true;
 	}
 
 	std::cout << "hai perso";
+	return false;
 }
 
 void UI::display(sf::RenderWindow& window) {
@@ -97,13 +116,13 @@ void UI::display(sf::RenderWindow& window) {
 	scoreTxt.setString(std::to_string(score));
 	maxScoreTxt.setString("maxScore: " + std::to_string(maxScore));
 	
-	std::string str= "";
 	for (int i = 0; i < lives; i++) {
-		str += "<3 ";
+		lifeGfx.setPosition(window.getSize().x - 100 * i - 50, 50);
+		window.draw(lifeGfx);
 	}
-	livesTxt.setString(str);
+	//livesTxt.setString(str);
 
 	window.draw(scoreTxt);
 	window.draw(maxScoreTxt);
-	window.draw(livesTxt);
+	//window.draw(livesTxt);
 }
