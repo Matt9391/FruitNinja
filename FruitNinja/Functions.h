@@ -19,4 +19,4 @@ float distance(const sf::Vector2f& v1,const sf::Vector2f& v2);
 
 bool checkCircleCollision(sf::CircleShape& a, sf::CircleShape& b);
 
-void spawnHalf(sf::Vector2f pos, float rad, float angle);
+void spawnHalf(sf::Vector2f pos, float rad, float angle, std::vector<sf::Texture*> hFruitsTextures);

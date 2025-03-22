@@ -6,6 +6,7 @@ class UI
 public:
 	static void init(sf::RenderWindow& window);
 	static void incrementScore();
+	static void resetScore();
 	static void decrementLives();
 
 	static void display(sf::RenderWindow& window);

@@ -53,6 +53,15 @@ void UI::incrementScore() {
 		maxScore = score;
 	}
 }
+void UI::resetScore() {
+	if (!initalized) {
+		std::cout << "non hai inizializzato la ui"<<std::endl;
+		throw std::exception("non hai inizializzato la ui");
+		return;
+	}
+
+	score = 0;
+}
 
 void UI::decrementLives() {
 	if (!initalized) {
@@ -61,7 +70,7 @@ void UI::decrementLives() {
 		return;
 	}
 	
-	score = 0;
+	resetScore();
 
 	if (lives > 1) {
 		lives--;

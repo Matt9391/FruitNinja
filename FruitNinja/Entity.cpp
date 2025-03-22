@@ -2,13 +2,16 @@
 #include "Functions.h"
 #include "Entity.h" 
 
-Entity::Entity(sf::Vector2f pos, sf::Vector2f speed, float radius, sf::Vector2f targetPos) :
+Entity::Entity(sf::Vector2f pos, sf::Vector2f speed, float radius, sf::Vector2f targetPos, sf::Texture& txt) :
 	pos(pos),
 	speed(speed),
 	radius(radius),
 	gravity(0.5),
 	toRemove(false),
-	slashed(false)
+	slashed(false),
+	txt(txt),
+	angle(0),
+	angleInc(0)
 {
 	velocity = sf::Vector2f(0, 0);
 	dir = sf::Vector2f(0, 0);
@@ -20,6 +23,12 @@ Entity::Entity(sf::Vector2f pos, sf::Vector2f speed, float radius, sf::Vector2f 
 
 	setDir(targetPos);
 	setVelocity();
+
+	angleInc = this->dir.x > 0 ? 2 : -2;
+
+	gfx.setTexture(txt);
+	gfx.setScale(radius * 0.0025f, radius * 0.0025f);
+	gfx.setOrigin(txt.getSize().x / 2.f, txt.getSize().y / 2.f);
 }
 
 void Entity::setVelocity() {
@@ -61,7 +70,15 @@ bool Entity::checkSlashCollision(sf::CircleShape& circle) {
 	
 }
 
+void Entity::rotateSprite() {
+	this->angle += this->angleInc;
+	this->gfx.setRotation(this->angle);
+}
+
+
 void Entity::update(sf::RenderWindow& window,sf::CircleShape circle) {
+	rotateSprite();
+
 	outOfBound(window);
 	if (checkSlashCollision(circle)) {
 		this->toRemove = true;
@@ -73,6 +90,8 @@ void Entity::update(sf::RenderWindow& window,sf::CircleShape circle) {
 
 void Entity::display(sf::RenderWindow& window) {
 	this->shape.setPosition(this->pos);
+	this->gfx.setPosition(this->pos);
 
-	window.draw(this->shape);
+	//window.draw(this->shape);
+	window.draw(this->gfx);
 }

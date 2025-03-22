@@ -52,7 +52,7 @@ bool checkCircleCollision(sf::CircleShape& a, sf::CircleShape& b) {
 }
 
 
-void spawnHalf(sf::Vector2f pos, float rad, float angle) {
-    halfFruits.push_back(HalfFruit(pos, 5, rad*0.8, angle + 0.15f, 20));
-    halfFruits.push_back(HalfFruit(pos, 5, rad*0.8, angle + 0.15f + M_PI, 20));
+void spawnHalf(sf::Vector2f pos, float rad, float angle, std::vector<sf::Texture*> hFruitsTextures) {
+    halfFruits.push_back(HalfFruit(pos, 3, rad*0.8, angle - M_PI /2 , 20, *hFruitsTextures[0], radiansToDegrees(angle)));
+    halfFruits.push_back(HalfFruit(pos, 3, rad*0.8, angle + M_PI /2, 20, *hFruitsTextures[1], radiansToDegrees(angle)+360));
 }

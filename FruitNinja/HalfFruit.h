@@ -5,7 +5,7 @@ class HalfFruit
 {
 public:
 
-	HalfFruit(sf::Vector2f pos, float speed, float radius, float angle, int lifespan);
+	HalfFruit(sf::Vector2f pos, float speed, float radius, float angle, int lifespan, sf::Texture& txt, float gfxAngle);
 
 	void update();
 	void display(sf::RenderWindow& window);
@@ -26,5 +26,7 @@ private:
 	sf::Vector2f dir;
 
 	int lifespan;
+
+	sf::Sprite gfx;
 };
 
