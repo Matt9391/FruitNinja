@@ -102,8 +102,7 @@
               "RelativeToolTip": "Menu.cpp",
               "ViewState": "AgIAACcAAAAAAAAAAAAAAEAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-22T19:46:24.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T19:46:24.521Z"
             },
             {
               "$type": "Document",
@@ -115,8 +114,7 @@
               "RelativeToolTip": "Menu.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-22T15:38:01.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T15:38:01.667Z"
             },
             {
               "$type": "Document",
@@ -128,8 +126,7 @@
               "RelativeToolTip": "UI.cpp",
               "ViewState": "AgIAABYAAAAAAAAAAAAWwGIAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-20T14:40:45.229Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T14:40:45.229Z"
             },
             {
               "$type": "Document",
@@ -141,8 +138,7 @@
               "RelativeToolTip": "UI.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-20T14:40:15.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T14:40:15.664Z"
             },
             {
               "$type": "Document",
@@ -166,8 +162,7 @@
               "RelativeToolTip": "Bomb.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-15T18:00:06.442Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T18:00:06.442Z"
             },
             {
               "$type": "Document",
@@ -179,8 +174,7 @@
               "RelativeToolTip": "Entity.cpp",
               "ViewState": "AgIAAEkAAAAAAAAAAAAswFgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-14T22:58:19.231Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T22:58:19.231Z"
             },
             {
               "$type": "Document",
@@ -192,8 +186,7 @@
               "RelativeToolTip": "Entity.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-14T22:49:37.416Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T22:49:37.416Z"
             },
             {
               "$type": "Document",
@@ -205,8 +198,7 @@
               "RelativeToolTip": "HalfFruit.cpp",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-13T15:12:05.492Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T15:12:05.492Z"
             },
             {
               "$type": "Document",
@@ -230,8 +222,7 @@
               "RelativeToolTip": "Functions.cpp",
               "ViewState": "AgIAAD4AAAAAAAAAAAAswFMAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-18T20:11:06.527Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:11:06.527Z"
             },
             {
               "$type": "Document",
@@ -243,8 +234,7 @@
               "RelativeToolTip": "Functions.h",
               "ViewState": "AgIAABAAAAAAAAAAAAAswCEAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-18T20:10:31.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T20:10:31.659Z"
             },
             {
               "$type": "Document",
@@ -256,8 +246,7 @@
               "RelativeToolTip": "Slash.cpp",
               "ViewState": "AgIAAG0AAAAAAAAAAAAmwHsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-18T18:43:37.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T18:43:37.589Z"
             },
             {
               "$type": "Document",
@@ -269,8 +258,7 @@
               "RelativeToolTip": "Slash.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-18T18:37:09.278Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T18:37:09.278Z"
             },
             {
               "$type": "Document",
@@ -282,8 +270,7 @@
               "RelativeToolTip": "Fruit.cpp",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-20T14:39:38.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T14:39:38.985Z"
             },
             {
               "$type": "Document",
@@ -305,7 +292,7 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "E:\\Informatica\\GitHubRepos\\FruitNinja\\FruitNinja\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAF0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-16T17:49:36.786Z",
               "EditorCaption": ""
