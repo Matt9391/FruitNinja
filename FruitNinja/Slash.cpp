@@ -3,7 +3,7 @@
 #include <iostream>
 
 Slash::Slash(sf::RenderWindow& window) : slashing(false), slash(sf::TriangleStrip), maxTails(9){
-	this->radius = window.getSize().y / 27;
+	this->radius = window.getSize().y / 27.f;
 }
 
 void Slash::update(sf::RenderWindow& window) {
@@ -99,15 +99,16 @@ void Slash::moveSlash() {
 		red = constrain((int)red, 0, 255);
 		green = constrain((int)green, 0, 255);
 
-
 		if (i == 0) {
 			this->slash.append(sf::Vertex(extBottom, sf::Color(red, green, b, alpha)));
 		}
-		else if (i == this->circles.size() - 2) {
+
+		this->slash.append(sf::Vertex(extLeft, sf::Color(red, green, b, alpha)));
+
+		if (i == this->circles.size() - 2) {
 			this->slash.append(sf::Vertex(extTop, sf::Color(red, green, b, alpha)));
 		}
 
-		this->slash.append(sf::Vertex(extLeft, sf::Color(red, green, b, alpha)));
 		this->slash.append(sf::Vertex(extRight, sf::Color(red, green, b, alpha)));
 	}
 }

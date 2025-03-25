@@ -5,42 +5,38 @@
 
 sf::Font Menu::font;
 sf::Text Menu::title;
-sf::Text Menu::buttonStr;
 sf::RectangleShape Menu::button;
+sf::Sprite Menu::buttonGfx;
 bool Menu::initalized = false;
 
-void Menu::init(sf::RenderWindow& window) {
+void Menu::init(sf::RenderWindow& window, sf::Texture& btnTxt) {
 	if (!font.loadFromFile("C:/Windows/Fonts/arial.ttf")) {
 		std::cerr << "Errore nel caricamento del font!" << std::endl;
 		return;
 	}
 
 	title.setFont(font);
-	buttonStr.setFont(font);
 
 	title.setCharacterSize(45);
-	buttonStr.setCharacterSize(45);
 
 	title.setFillColor(sf::Color::White);
-	buttonStr.setFillColor(sf::Color::White);
 
 	title.setString("Fruit Ninja\n  by Matt");
-	buttonStr.setString("Slash to start");
 	
 	sf::FloatRect textRect = title.getLocalBounds();
 	title.setOrigin(textRect.left + textRect.width / 2.0f, textRect.top + textRect.height / 2.0f);
-	
-	textRect = buttonStr.getLocalBounds();
-	buttonStr.setOrigin(textRect.left + textRect.width / 2.0f, textRect.top + textRect.height / 2.0f);
 
 	sf::Vector2f pos(window.getSize().x / 2.f, window.getSize().y / 2.f);
 	title.setPosition(pos + sf::Vector2f(0,-50.f));
-	buttonStr.setPosition(pos + sf::Vector2f(0,150.f));
 
-	button.setPosition(pos + sf::Vector2f(0, 150.f));
-	button.setSize(sf::Vector2f(300, 80));
+	button.setPosition(pos + sf::Vector2f(0, 146.f));
+	button.setSize(sf::Vector2f(160, 80));
 	button.setOrigin(button.getSize().x / 2.f, button.getSize().y / 2.f);
 	button.setFillColor(sf::Color::Black);
+
+	buttonGfx.setTexture(btnTxt);
+	buttonGfx.setOrigin(btnTxt.getSize().x / 2.f, btnTxt.getSize().y / 2.f);
+	buttonGfx.setPosition(pos + sf::Vector2f(0, 150.f));
 
 	initalized = true;
 }
@@ -74,6 +70,6 @@ void Menu::display(sf::RenderWindow& window) {
 	}
 
 	window.draw(title);
-	window.draw(button);
-	window.draw(buttonStr);
+	//window.draw(button);
+	window.draw(buttonGfx);
 }

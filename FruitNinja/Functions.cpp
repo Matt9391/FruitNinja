@@ -72,7 +72,8 @@ Fruit generateNewFruit(sf::RenderWindow& window, std::vector<sf::Texture>& txts)
 
     sf::Vector2f sp(10, Random::randomInt(minSpeed, maxSpeed));
 
-    sf::Vector2f targetPos((float)window.getSize().x / 2, (float)window.getSize().y / 2);
+    float sens = window.getSize().x / 10.f;
+    sf::Vector2f targetPos((float)window.getSize().x / 2 + Random::randomFloat(-sens, sens), (float)window.getSize().y / 2);
 
     int nTxt = Random::randomInt(0, 2) * 3;
     std::vector<sf::Texture*> hFruitsTextures = { &txts[nTxt + 1], &txts[nTxt + 2] };
@@ -91,7 +92,8 @@ Bomb generateNewBomb(sf::RenderWindow& window, std::vector<sf::Texture>& txts) {
 
     sf::Vector2f sp(10, Random::randomInt(minSpeed, maxSpeed));
 
-    sf::Vector2f targetPos((float)window.getSize().x / 2, (float)window.getSize().y / 2);
+    float sens = window.getSize().x / 10.f;
+    sf::Vector2f targetPos((float)window.getSize().x / 2 + Random::randomFloat(-sens, sens), (float)window.getSize().y / 2);
 
     int nTxt = 9;
 

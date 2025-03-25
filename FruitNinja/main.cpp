@@ -44,11 +44,9 @@ int main()
         "./Sprites/watermelon.png",
         "./Sprites/watermelonTop.png",
         "./Sprites/watermelonBottom.png",
-        "./Sprites/plum.png",
-        "./Sprites/background.png",
-        "./Sprites/heart.png"
+        "./Sprites/bomb.png",
+        "./Sprites/background.png"
     };
-
     for (const auto& path : texturesPaths) {
         sf::Texture txt;
         if (txt.loadFromFile(path)) {
@@ -59,11 +57,28 @@ int main()
         }
     }
 
-    UI::init(window, textures[textures.size() -1]);
-    Menu::init(window);
+    std::vector<sf::Texture> texturesGUI;
+    std::vector<std::string> texturesGUIPaths = {
+        "./Sprites/heart.png",
+        "./Sprites/play.png"
+    };
+
+    for (const auto& path : texturesGUIPaths) {
+        sf::Texture txt;
+        if (txt.loadFromFile(path)) {
+            texturesGUI.push_back(std::move(txt));
+        }
+        else {
+            std::cerr << "errore nell'import delle immagine";
+        }
+    }
+    
+
+    UI::init(window, texturesGUI[0]);
+    Menu::init(window, texturesGUI[1]);
 
     sf::Sprite background;
-    sf::Texture& bgTxt = textures[textures.size() - 2];
+    sf::Texture& bgTxt = textures[textures.size() - 1];
     background.setTexture(bgTxt);
     background.setPosition(window.getSize().x / 2.f, window.getSize().y / 2.f);
     background.setOrigin(bgTxt.getSize().x / 2.f, bgTxt.getSize().y / 2.f);
@@ -74,7 +89,6 @@ int main()
 
     while (window.isOpen())
     {
-
 
         sf::Event event;
         while (window.pollEvent(event))
