@@ -21,7 +21,7 @@ int main()
     int frameCount = 0;
 
     sf::RenderWindow window(sf::VideoMode(1200, 800), "Fruit Ninja");
-    window.setFramerateLimit(60);
+    window.setFramerateLimit(144);
     //float radius = 25.f;  // Raggio del frutto
     
     //sf::Vector2f spawnPos(Random::randomFloat(radius, window.getSize().x - radius), 500);
