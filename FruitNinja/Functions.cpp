@@ -101,14 +101,17 @@ Bomb generateNewBomb(sf::RenderWindow& window, std::vector<sf::Texture>& txts) {
 }
 
 
-
 void sceneMenu(sf::RenderWindow& window, sf::Sprite& background, Slash& slash) {
     slash.update(window);
     Menu::update(window, slash);
+
     window.clear();
     window.draw(background);
+    
+    UI::showGameOver(window);
     Menu::display(window);
     slash.display(window);
+    
     window.display();
 }
 
@@ -201,6 +204,7 @@ void sceneGameplay(int& frameCount, int& incr, sf::RenderWindow& window, std::ve
     if (sceneChanging) {
         incr = 0;
         changeScene(0);
+        UI::gameOver = true;
     }
 }
 

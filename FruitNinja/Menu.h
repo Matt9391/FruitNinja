@@ -12,6 +12,7 @@ private:
 	
 	static sf::Font font;
 	static sf::Text title;
+	static sf::Text btnText;
 	static sf::RectangleShape button;
 	static sf::Sprite buttonGfx;
 	static bool initalized;

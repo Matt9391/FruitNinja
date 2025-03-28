@@ -21,7 +21,7 @@ int main()
     int frameCount = 0;
 
     sf::RenderWindow window(sf::VideoMode(1200, 800), "Fruit Ninja");
-    window.setFramerateLimit(144);
+    window.setFramerateLimit(60);
     //float radius = 25.f;  // Raggio del frutto
     
     //sf::Vector2f spawnPos(Random::randomFloat(radius, window.getSize().x - radius), 500);
@@ -60,7 +60,8 @@ int main()
     std::vector<sf::Texture> texturesGUI;
     std::vector<std::string> texturesGUIPaths = {
         "./Sprites/heart.png",
-        "./Sprites/play.png"
+        "./Sprites/button.png",
+        "./Sprites/alert.png"
     };
 
     for (const auto& path : texturesGUIPaths) {
@@ -74,7 +75,7 @@ int main()
     }
     
 
-    UI::init(window, texturesGUI[0]);
+    UI::init(window, texturesGUI[0], texturesGUI[2]);
     Menu::init(window, texturesGUI[1]);
 
     sf::Sprite background;
