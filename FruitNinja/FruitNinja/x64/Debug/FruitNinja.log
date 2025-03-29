@@ -1,43 +1,24 @@
-﻿  UI.cpp
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(60,56): warning C4244: 'argomento': conversione da 'T' a 'T'. Possibile perdita di dati.
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(60,56): warning C4244:         with
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(60,56): warning C4244:         [
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(60,56): warning C4244:             T=unsigned int
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(60,56): warning C4244:         ]
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(60,56): warning C4244:         and
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(60,56): warning C4244:         [
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(60,56): warning C4244:             T=float
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(60,56): warning C4244:         ]
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(61,60): warning C4244: 'argomento': conversione da 'T' a 'T'. Possibile perdita di dati.
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(61,60): warning C4244:         with
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(61,60): warning C4244:         [
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(61,60): warning C4244:             T=unsigned int
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(61,60): warning C4244:         ]
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(61,60): warning C4244:         and
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(61,60): warning C4244:         [
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(61,60): warning C4244:             T=float
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(61,60): warning C4244:         ]
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(62,56): warning C4244: 'argomento': conversione da 'T' a 'T'. Possibile perdita di dati.
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(62,56): warning C4244:         with
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(62,56): warning C4244:         [
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(62,56): warning C4244:             T=unsigned int
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(62,56): warning C4244:         ]
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(62,56): warning C4244:         and
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(62,56): warning C4244:         [
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(62,56): warning C4244:             T=float
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(62,56): warning C4244:         ]
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(156,56): warning C4244: 'argomento': conversione da 'T' a 'T'. Possibile perdita di dati.
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(156,56): warning C4244:         with
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(156,56): warning C4244:         [
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(156,56): warning C4244:             T=unsigned int
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(156,56): warning C4244:         ]
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(156,56): warning C4244:         and
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(156,56): warning C4244:         [
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(156,56): warning C4244:             T=float
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(156,56): warning C4244:         ]
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(162,52): warning C4244: 'argomento': conversione da 'T' a 'float'. Possibile perdita di dati.
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(162,52): warning C4244:         with
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(162,52): warning C4244:         [
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(162,52): warning C4244:             T=unsigned int
-E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\UI.cpp(162,52): warning C4244:         ]
+﻿  Bomb.cpp
+  Entity.cpp
+  Fruit.cpp
+  Functions.cpp
+E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(81,42): warning C4244: 'argomento': conversione da 'int' a 'T'. Possibile perdita di dati.
+E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(81,42): warning C4244:         with
+E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(81,42): warning C4244:         [
+E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(81,42): warning C4244:             T=float
+E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(81,42): warning C4244:         ]
+E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(104,42): warning C4244: 'argomento': conversione da 'int' a 'T'. Possibile perdita di dati.
+E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(104,42): warning C4244:         with
+E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(104,42): warning C4244:         [
+E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(104,42): warning C4244:             T=float
+E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(104,42): warning C4244:         ]
+E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(151,16): warning C4267: 'inizializzazione': conversione da 'size_t' a 'int'. Possibile perdita di dati.
+E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(170,16): warning C4267: 'inizializzazione': conversione da 'size_t' a 'int'. Possibile perdita di dati.
+E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\Functions.cpp(178,16): warning C4267: 'inizializzazione': conversione da 'size_t' a 'int'. Possibile perdita di dati.
+  HalfFruit.cpp
+  Menu.cpp
+  Slash.cpp
+  UI.cpp
+  main.cpp
+  Generazione del codice in corso...
   FruitNinja.vcxproj -> E:\Informatica\GitHubRepos\FruitNinja\FruitNinja\x64\Debug\FruitNinja.exe

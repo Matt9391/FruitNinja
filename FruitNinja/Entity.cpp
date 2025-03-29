@@ -35,13 +35,14 @@ void Entity::setVelocity() {
 	this->velocity = sf::Vector2f(this->speed.x * this->dir.x, this->speed.y * this->dir.y);
 }
 
-//Funzione che setta la direzione rispetto a una posizione finale
-//tutte le funzioni matematiche di C++ vanno in radianti
+//method that set the direction relative to the final positio
+//[all function of C++ math are in radiants :(((( ]
 void Entity::setDir(sf::Vector2f targetPos) {
 	//in radianti
 	float angle = std::atan2(targetPos.y - this->pos.y, targetPos.x - this->pos.x);
 
 	this->dir.x = cos(angle);
+	//y direction always point on top
 	this->dir.y = -1;
 }
 
@@ -51,13 +52,14 @@ void Entity::addGravity() {
 
 
 void Entity::outOfBound(sf::RenderWindow& window) {
-	if (this->pos.y > window.getSize().y * 1.5) {
-		std::cout << "ESPLODO" << std::endl;
+	//* 1.5 because like this it wont remove it self when spawned, because it spawn below the screen
+	if (this->pos.y > window.getSize().y * 1.5f) {
 		this->toRemove = true;
 	}
 }
 
 bool Entity::checkSlashCollision(sf::CircleShape& circle) {
+	//if the head is that random generated circle it doesnt check
 	if (circle.getRadius() <= 2) {
 		return false;
 	}
@@ -72,7 +74,7 @@ bool Entity::checkSlashCollision(sf::CircleShape& circle) {
 
 void Entity::rotateSprite() {
 	this->angle += this->angleInc;
-	this->gfx.setRotation(this->angle);
+	this->gfx.setRotation((float)this->angle);
 }
 
 

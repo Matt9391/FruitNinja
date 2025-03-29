@@ -8,6 +8,7 @@ int UI::maxScore = 0;
 int UI::maxStreak = 0;
 int UI::lives = 3;
 int UI::alertTime = 120;
+int UI::debounce = 0;
 
 bool UI::gameOver = false;
 bool UI::initalized = false;
@@ -21,11 +22,20 @@ sf::Text UI::alertText;
 sf::Sprite UI::lifeGfx;
 sf::Sprite UI::alertGfx;
 
-void UI::init(sf::RenderWindow& window, sf::Texture& lifeTxt, sf::Texture& alertTxt) {
+sf::Sound UI::song;
+bool UI::songEnable = false;
+
+sf::Text UI::btnText;
+sf::RectangleShape UI::button;
+sf::Sprite UI::buttonGfx;
+
+void UI::init(sf::RenderWindow& window, sf::Texture& lifeTxt, sf::Texture& alertTxt, sf::SoundBuffer& musicBuff, sf::Texture& btnTxt) {
 	if (!font.loadFromFile("./Fonts/LazyFox Pixel Font 2.ttf")) {
 		std::cerr << "Errore nel caricamento del font!" << std::endl;
 		return;
 	}
+
+	//just a lot of annying things
 
 	lifeGfx.setTexture(lifeTxt);
 	lifeGfx.setOrigin(lifeTxt.getSize().x / 2.f, lifeTxt.getSize().y / 2.f);
@@ -33,7 +43,7 @@ void UI::init(sf::RenderWindow& window, sf::Texture& lifeTxt, sf::Texture& alert
 
 	alertGfx.setTexture(alertTxt);
 	alertGfx.setOrigin(alertTxt.getSize().x / 2.f, alertTxt.getSize().y / 2.f);
-	alertGfx.setScale(7, 3.5);
+	alertGfx.setScale(8, 3.5);
 	alertGfx.setPosition(sf::Vector2f(window.getSize().x / 2.f, window.getSize().y / 2.f));
 
 	scoreText.setFont(font); 
@@ -50,20 +60,44 @@ void UI::init(sf::RenderWindow& window, sf::Texture& lifeTxt, sf::Texture& alert
 	maxStreakText.setFillColor(sf::Color::White);
 	livesText.setFillColor(sf::Color::White);
 	alertText.setFillColor(sf::Color::White);
-	//alertText.setFillColor(sf::Color(50,50,50));
 
 	scoreText.setString(std::to_string(score));
 	maxStreakText.setString(std::to_string(maxStreak));
 	livesText.setString(std::to_string(lives));
 	alertText.setString("Hai perso looser");
 
-	scoreText.setPosition(sf::Vector2f(window.getSize().x / 2, 50));
-	maxStreakText.setPosition(sf::Vector2f(window.getSize().x / 20, 50));
-	livesText.setPosition(sf::Vector2f(window.getSize().x / 20, 100));
+	scoreText.setPosition(sf::Vector2f(window.getSize().x / 2.f, 50));
+	maxStreakText.setPosition(sf::Vector2f(window.getSize().x / 20.f, 50));
+	livesText.setPosition(sf::Vector2f(window.getSize().x / 20.f, 100));
 	alertText.setPosition(sf::Vector2f(window.getSize().x / 2.f, window.getSize().y / 2.f));
 	
 	sf::FloatRect textRect = alertText.getLocalBounds();
 	alertText.setOrigin(textRect.left + textRect.width / 2.0f, textRect.top + textRect.height / 2.0f);
+
+	song.setBuffer(musicBuff);
+	song.setLoop(true);
+	song.setVolume(5);
+	song.stop();
+
+
+	btnText.setFont(font);
+	btnText.setCharacterSize(25);
+	btnText.setFillColor(sf::Color(80, 50, 50));
+	btnText.setString("Audio: ON");
+
+	textRect = btnText.getLocalBounds();
+	btnText.setOrigin(textRect.left + textRect.width / 2.f, textRect.top + textRect.height / 2.f);
+	btnText.setPosition(sf::Vector2f(100, window.getSize().y - 60.f));
+
+	button.setPosition(sf::Vector2f(100, window.getSize().y - 60.f));
+	button.setSize(sf::Vector2f(310, 80));
+	button.setOrigin(button.getSize().x / 2.f, button.getSize().y / 2.f);
+	button.setFillColor(sf::Color::Black);
+
+	buttonGfx.setTexture(btnTxt);
+	buttonGfx.setScale(2.7f, 2.5f);
+	buttonGfx.setOrigin(btnTxt.getSize().x / 2.f, btnTxt.getSize().y / 2.f);
+	buttonGfx.setPosition(sf::Vector2f(100, window.getSize().y - 60.f));
 
 	gameOver = false;
 	initalized = true;
@@ -71,8 +105,7 @@ void UI::init(sf::RenderWindow& window, sf::Texture& lifeTxt, sf::Texture& alert
 
 void UI::incrementScore() {
 	if (!initalized) {
-		std::cout << "non hai inizializzato la ui"<<std::endl;
-		throw std::exception("non hai inizializzato la ui");
+		std::cerr << "you must initalize UI"<<std::endl;
 		return;
 	}
 
@@ -84,8 +117,7 @@ void UI::incrementScore() {
 }
 void UI::resetScore() {
 	if (!initalized) {
-		std::cout << "non hai inizializzato la ui"<<std::endl;
-		throw std::exception("non hai inizializzato la ui");
+		std::cerr << "you must initalize UI" << std::endl;
 		return;
 	}
 
@@ -94,12 +126,12 @@ void UI::resetScore() {
 
 void UI::resetAll() {
 	if (!initalized) {
-		std::cout << "non hai inizializzato la ui" << std::endl;
-		throw std::exception("non hai inizializzato la ui");
+		std::cerr << "you must initalize UI" << std::endl;
 		return;
 	}
 
 	score = 0;
+	maxScore = 0;
 	maxStreak = 0;
 	lives = 3;
 	gameOver = false;
@@ -108,8 +140,7 @@ void UI::resetAll() {
 
 bool UI::decrementLives() {
 	if (!initalized) {
-		std::cout << "non hai inizializzato la ui" << std::endl;
-		throw std::exception("non hai inizializzato la ui");
+		std::cerr << "you must initalize UI" << std::endl;
 		return false;
 	}
 	
@@ -124,7 +155,13 @@ bool UI::decrementLives() {
 	return false;
 }
 
+//method that show the game over panel for some second (alertime frames)
 void UI::showGameOver(sf::RenderWindow& window) {
+	if (!initalized) {
+		std::cerr << "you must initalize UI" << std::endl;
+		return;
+	}
+
 	if (!gameOver) {
 		return;
 	}
@@ -135,35 +172,86 @@ void UI::showGameOver(sf::RenderWindow& window) {
 
 	alertTime--;
 
+	alertText.setString("You lose! Score: " + std::to_string(maxScore));
+	
+	sf::FloatRect textRect = alertText.getLocalBounds();
+	alertText.setOrigin(textRect.left + textRect.width / 2.f, textRect.top + textRect.height / 2.f);
+
 	window.draw(alertGfx);
 	window.draw(alertText);
 
 }
 
-void UI::display(sf::RenderWindow& window) {
+void UI::audioButtonHandler(sf::RenderWindow& window, Slash& slash) {
 	if (!initalized) {
-		std::cout << "non hai inizializzato la ui" << std::endl;
-		throw std::exception("non hai inizializzato la ui");
+		std::cerr << "you must initalize UI" << std::endl;
 		return;
 	}
 
-	// Aggiorna l'origine per centrare il testo
+	std::string str = songEnable ? "ON" : "OFF";
+	btnText.setString("Audio: " + str);
+	
+	sf::FloatRect textRect = btnText.getLocalBounds();
+	btnText.setOrigin(textRect.left + textRect.width / 2.f, textRect.top + textRect.height / 2.f);
+
+	window.draw(buttonGfx);
+	window.draw(btnText);
+	
+	debounce--;
+	
+	if (debounce > 0) {
+		return;
+	}
+
+	if (!slash.getSlashing()) {
+		return;
+	}
+
+	sf::Vector2f slashPos = slash.getHead().getPosition();
+
+	if (checkAABB(slashPos, button)) {
+		songEnable = !songEnable;
+		debounce = 30;
+	}
+
+	//window.draw(button);
+}
+
+void UI::playSong() {
+	if (!initalized) {
+		std::cerr << "you must initalize UI" << std::endl;
+		return;
+	}
+
+	if (!songEnable) {
+		song.stop();
+		return;
+	}
+
+	if (song.getStatus() != sf::Sound::Playing) {
+		song.play();
+	}
+}
+
+void UI::display(sf::RenderWindow& window) {
+	if (!initalized) {
+		std::cerr << "you must initalize UI" << std::endl;
+		return;
+	}
+
 	sf::FloatRect textRect = scoreText.getLocalBounds();
 	scoreText.setOrigin(textRect.left + textRect.width / 2.0f, textRect.top + textRect.height / 2.0f);
 
-	// Assicurati di aver settato la posizione al centro della finestra
-	scoreText.setPosition(sf::Vector2f(window.getSize().x / 2, 50));
+	scoreText.setPosition(sf::Vector2f(window.getSize().x / 2.f, 50));
 
 	scoreText.setString(std::to_string(score));
 	maxStreakText.setString("Top Streak: " + std::to_string(maxStreak));
 	
 	for (int i = 0; i < lives; i++) {
-		lifeGfx.setPosition(window.getSize().x - 100 * i - 50, 50);
+		lifeGfx.setPosition(window.getSize().x - 100.f * i - 50.f, 50.f);
 		window.draw(lifeGfx);
 	}
-	//livesTxt.setString(str);
 
 	window.draw(scoreText);
 	window.draw(maxStreakText);
-	//window.draw(livesTxt);
 }

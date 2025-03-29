@@ -21,6 +21,7 @@ HalfFruit::HalfFruit(sf::Vector2f pos, float speed, float radius, float angle, i
 	setVelocity();
 
 	this->gfx.setTexture(txt);
+	//scale in base of the radius so its always the same
 	this->gfx.setScale(radius * 0.0025f, radius * 0.0025f);
 	this->gfx.setOrigin(txt.getSize().x / 2.f, txt.getSize().y / 2.f);
 	this->gfx.setRotation(gfxAngle);
