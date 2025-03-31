@@ -1,4 +1,2 @@
 # FruitNinja
- Develop of Fruit Ninja with C++ and SFML
-##Ciao
- balls
+ ## First try of a project in C++ with SFML, please judge and tell me how to improve
